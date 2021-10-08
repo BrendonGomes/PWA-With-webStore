@@ -3,27 +3,23 @@
   <title>GesBar</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/assets/css/estilo.css" />
+  <link rel="stylesheet" href="assets/css/estilo.css" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" type="image/png" href="/imagens/icones/favicon.ico" />
   <script>
 
     navigator.serviceWorker.register('/assets/js/GesBar-sw.js');
-/*
-    fetch('/conteudoHome').then(function(res){
-      return res.text();
-    }).then(function(conteudo){
-      document.getElementById('conteudo').innerHTML = conteudo;
-    }).catch(function(error){
-      document.getElementById('conteudo').innerHTML = 'Falha ao carregar dados da Home';
-
-    });*/
-
+    
   </script>
 </head>
 <body>
-  <p><img src="assets/imagens/logo.png"/></p>
-  <h1>Minha primeira PWA</h1>
+
+  <div class="top-bar">
+    <p><img width="50%" height="50%" src="assets/imagens/logo.png"/></p>
+    <h1>Bem Vindo!</h1>
+  </div>
+
  <div id="conteudo">
+
  </div>
 </body>
