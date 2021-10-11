@@ -12,19 +12,19 @@
   <script src="./src/components/footer/index.js"></script>
   <script src="./src/views/produtos/lista/index.js"></script>
 
-  <script>
-    navigator.serviceWorker.register('/GesBar-sw.js');
-
-    fetch('/conteudoHome').then(function(res){
-      return res.text();
-    }).then(function(conteudo){
-      document.getElementById('conteudo').innerHTML = '<produtos-list></produtos-list>';
-    }).catch(function(error){
-      document.getElementById('conteudo').innerHTML = 'Falha ao carregar dados da Home';
-
-    });
-  </script>
 </head>
 <body>
   <div id="conteudo" class="content"></div>  
 </body>
+
+<script>
+  navigator.serviceWorker.register('/GesBar-sw.js');
+
+function init() {
+document.getElementById('conteudo').innerHTML = '<produtos-list></produtos-list>';
+
+}
+
+init();
+
+</script>
